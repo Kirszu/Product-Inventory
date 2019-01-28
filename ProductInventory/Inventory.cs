@@ -27,10 +27,11 @@ namespace ProductInventory
             string result = "";
             foreach (var item in this.inventory) { 
                 {
-                    result += "," + item.Name;
+                    result += item.Name + ", ";
                 }
    
             }
+            result = result.Remove(result.Length - 2);
             return result;
         }
 
