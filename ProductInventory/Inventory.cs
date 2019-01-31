@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace ProductInventory
 {
-    internal class Inventory
+    public class Inventory
     {
-        public List<Product> inventory = new List<Product>();
+        internal List<Product> inventory = new List<Product>();
 
-        public void Add(Product prod)
+        internal void Add(Product prod)
         {
             inventory.Add(prod);
         }

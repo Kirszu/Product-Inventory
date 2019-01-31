@@ -2,22 +2,18 @@
 
 namespace ProductInventory
 {
-    public class InputCollector
+    public static class InputCollector
     {
-        private Validator val = new Validator();
 
-        public InputCollector()
-        {
-        }
-
-        public double AskForDouble(string message)
+  
+        public static double AskForDouble(string message)
         {
             Console.WriteLine(message);
             bool correctValue = false;
             do
             {
                 string test = Console.ReadLine();
-                if (val.CheckInputIfDouble(test))
+                if (Validator.CheckInputIfDouble(test))
                 {
                     correctValue = true;
                     return double.Parse(test);
@@ -31,14 +27,14 @@ namespace ProductInventory
             return 0;
         }
 
-        public int AskForInteger(string message)
+        public static int AskForInteger(string message)
         {
             Console.WriteLine(message);
             bool correctValue = false;
             do
             {
                 string test = Console.ReadLine();
-                if (val.CheckInputIfInteger(test))
+                if (Validator.CheckInputIfInteger(test))
                 {
                     correctValue = true;
                     return int.Parse(test);
@@ -52,14 +48,14 @@ namespace ProductInventory
             return 0;
         }
 
-        public string AskForString(string message)
+        public static string AskForString(string message)
         {
             Console.WriteLine(message);
             bool correctValue = false;
             do
             {
                 string test = Console.ReadLine();
-                if (val.CheckInputIfValidProductName(test))
+                if (Validator.CheckInputIfValidProductName(test))
                 {
                     correctValue = true;
                     return test;

@@ -1,6 +1,6 @@
 ﻿namespace ProductInventory
 {
-    internal class Product
+    public class Product
     {
         private string name;
         private double price;
